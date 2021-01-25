@@ -1,0 +1,31 @@
+#include<stdio.h>
+
+int decimal(long long int a);
+
+int main()
+{
+    long long int n;
+    printf("Enter the binary number :\n");
+    scanf("%d",&n);
+
+    printf("binary number %lld into decimal is equal to = %d",n,decimal(n));
+}
+
+int decimal(long long int a){
+    int i=1,sum=0;
+    while(a!=0){
+        if(a%10==1)
+            sum += i;
+        else if(a%10==0)
+            ;
+        else 
+            return 0;
+
+        i = i*2;
+        a = a/10;
+
+    }
+
+    return sum;
+}
+
